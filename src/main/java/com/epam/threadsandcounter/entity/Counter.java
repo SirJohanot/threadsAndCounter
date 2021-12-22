@@ -2,20 +2,16 @@ package com.epam.threadsandcounter.entity;
 
 public class Counter {
 
-    int val = 0;
+    private int value = 0;
 
     public Counter() {
     }
 
-    public int getVal() {
-        return val;
+    public synchronized int getValue() {
+        return value;
     }
 
-    public void setVal(int val) {
-        this.val = val;
-    }
-
-    public void increment() {
-        val++;
+    public synchronized void increment() {
+        value++;
     }
 }

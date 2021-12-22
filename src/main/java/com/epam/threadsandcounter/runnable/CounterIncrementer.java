@@ -14,9 +14,8 @@ public class CounterIncrementer implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i < TIMES_TO_INCREMENT; i++)
-            synchronized (counter) {
-                counter.increment();
-            }
+        for (int i = 0; i < TIMES_TO_INCREMENT; i++) {
+            counter.increment();
+        }
     }
 }
